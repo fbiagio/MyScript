@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+
+print "argomenit ... @ARGV\n";
+
+
+my $A="001";
+my $B=1;
+
+my $refA=\$A;
+my $refB=\$B;
+
+#\$B=\\$A;
+
+print "$A --- $refA\n";
+print "$B --- $refB\n"; 
+
+
+if ("$A" eq "$B"){
+	printf STDOUT "$A $B sono uguali\n";
+}else{
+	
+	printf STDOUT "$A $B diversi!!!! \n";
+}
+
+
+

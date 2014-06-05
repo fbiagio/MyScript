@@ -1,0 +1,27 @@
+include "types.cf"
+include "CFSTypes.cf"
+include "CVMTypes.cf"
+include "/etc/VRTSagents/ha/conf/Db2udb/Db2udbTypes.cf"
+
+cluster db2_mpp (
+     CounterInterval = 5
+     )
+
+system sysA (
+     )
+
+system sysB (
+     )
+
+system sysC (
+     )
+
+system sysD (
+     )
+
+group cvm (
+     SystemList = { sysA = 0, sysB = 1, sysC = 2, sysD = 3 }
+     AutoFailOver = 0
+     Parallel = 1
+     AutoStartList = { sysA, sysB, sysC, sysD }
+     )

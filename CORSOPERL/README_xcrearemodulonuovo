@@ -1,0 +1,2 @@
+module-starter --module=Foo::Bar,Foo::Bat \
+        --author="Andy Lester" --email=andy@petdance.com
